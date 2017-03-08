@@ -1,9 +1,10 @@
-<h2>Facebook repos</h2>
-
 <ul>
-  <li>{{link-to 'React' 'org.repo' 'React'}}</li>
-  <li>{{link-to 'React Native' 'org.repo' 'React-Native'}}</li>
-  <li>{{link-to 'Watchman' 'org.repo' 'watchman'}}</li>
+  {{#each content as |repo|}}
+    <li>
+      {{link-to repo.name 'org.repo.contributors' repo.name}}
+    </li>
+  {{/each}}
 </ul>
+
 <p>{{link-to 'Go to Home page' 'orgs'}}</p>
 {{outlet}}

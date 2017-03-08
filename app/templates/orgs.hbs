@@ -1,6 +1,6 @@
 <h1>My Github organizations</h1>
 <ul>
-  <li>{{link-to 'Facebook' 'org' 'Facebook'}}</li>
-  <li>{{link-to 'Google' 'org' 'Google'}}</li>
-  <li>{{link-to 'Ember' 'org' 'Ember'}}</li>
+  {{#each content as |org|}}
+    <li>{{link-to org.id 'org' org.id }}</li>
+  {{/each}}
 </ul>
